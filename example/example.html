@@ -1,0 +1,67 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <script src="animation.min.js"></script>
+    <style>
+        /* The navigation bar */
+        .navbar {
+            position: fixed; /* Set the navbar to fixed position */
+            bottom: 0; /* Position the navbar at the bottom of the page */
+            width: 100%; /* Full width */
+            margin-bottom: 10px;
+            border: 1px solid #e7e7e7;
+            background-color: #f3f3f3;
+            opacity: 0.1;
+            cursor: pointer;
+        }
+
+            .navbar:hover {
+                opacity: 1.0;
+            }
+
+            .navbar ul li a {
+                display: block;
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
+                float: left;
+            }
+
+                .navbar ul li a:hover {
+                    background-color: #ccc9c9;
+                }
+
+        ul.horizontal {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+<div id="navbar" class="navbar" style="display: none;"> <button id="pre">Previous</button> <button id="next" >Next</button>  <button id="show" >Show All </button> <button id="hide" >Hide All</button> <button id="start" >Start Animation </button> <button id="stop" >Stop Animation</button> </div>
+
+
+    <div class="container">
+        <div class="right">
+            <div class="desc">TEST 1</div>
+            <div class="desc">TEST 2</div>
+            <div class="desc">TEST 3</div>
+            <div class="desc">TEST 4</div>
+        </div>
+        <div class="left">
+            TEST OPACITY
+        </div>
+    </div>
+
+    <script>
+		opacity = 0.1; //opacity of elements
+		timeInterval = 3000; //3 seconds
+        initializeAnimation(null, ".right", "div", ".left");
+    </script>
+
+    
+</body>
+</html>
